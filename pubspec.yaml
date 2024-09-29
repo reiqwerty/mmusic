@@ -78,6 +78,54 @@ flutter:
           weight: 800
   uses-material-design: true
 
+  assets:
+    - assets/images/profileico.png
+    - assets/images/banner.png
+    - assets/music/ransom.png
+    - assets/music/goosebumps.png
+    - assets/music/lonely.png
+    - assets/music/dieforyou.png
+    - assets/music/doubletake.png
+    - assets/music/asap.png
+    - assets/music/odoriko.png
+    - assets/music/saturn.png
+    - assets/music/21savage.png
+    - assets/music/headbang.png
+    - assets/music/ditto.png
+    - assets/music/postmalone.png
+    - assets/images/anime.png
+    - assets/images/edm.png
+    - assets/images/hiphop.png
+    - assets/images/indie.png
+    - assets/images/kpop.png
+    - assets/images/lofi.png
+    - assets/images/pop.png
+    - assets/images/rock.png
+    - assets/images/r&b.png
+    - assets/images/country.png
+    - assets/images/easylistening.png
+    - assets/images/jazz.png
+    - assets/images/classic.png
+    - assets/images/metal.png
+    - assets/music/armageddon.png
+    - assets/music/thebox.png
+    - assets/music/20min.png
+    - assets/music/blueberryfaygo.png
+    - assets/music/fireflies.png
+    - assets/music/heatwaves.png
+    - assets/music/overdose.png
+    - assets/music/peradaban.png
+    - assets/music/coldplay.png
+    - assets/music/onedirection.png
+    - assets/music/arianagrande.png
+    - assets/images/renungkan.png
+    - assets/images/mix.png
+    - assets/images/gaming.png
+    - assets/images/aespa.png
+    - assets/images/nugas.png
+    - assets/images/eminem.png
+    - assets/images/turu.png
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
