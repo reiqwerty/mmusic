@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mmusic/pages/menu/favorite.dart';
 import 'package:mmusic/pages/menu/home.dart';
 import 'package:mmusic/pages/menu/library.dart';
 import 'package:mmusic/pages/menu/profile.dart';
@@ -12,14 +13,13 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final DashboardController dashboardController =
-    Get.find();
+    final DashboardController dashboardController = Get.find();
 
     final List<Widget> menus = [
       HomePage(),
       SearchPage(),
       LibraryPage(),
-      ProfilePage()
+      FavoritePage()
     ];
 
     return Obx(() {
@@ -36,19 +36,16 @@ class DashboardPage extends StatelessWidget {
             fontFamily: 'Poppins',
             fontWeight: FontWeight.bold,
           ),
-          unselectedLabelStyle: TextStyle(
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.normal
-          ),
+          unselectedLabelStyle:
+              TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.normal),
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.search), label: 'Search'),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.library_music_rounded), label: 'Library'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person), label: 'Profile')
+                icon: Icon(Icons.favorite), label: 'Favorite'),
           ],
         ),
       );

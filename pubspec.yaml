@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   get: ^4.6.6
+  sqflite: ^2.3.2
 
 dev_dependencies:
   flutter_test:
@@ -125,6 +126,7 @@ flutter:
     - assets/images/nugas.png
     - assets/images/eminem.png
     - assets/images/turu.png
+    - assets/images/loginbg.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
