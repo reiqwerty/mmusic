@@ -6,7 +6,7 @@ import 'package:mmusic/widget/my_text.dart';
 class AdapterLibrary extends StatelessWidget {
   final ModelMusic modelLibrary;
 
-  const AdapterLibrary({super.key, required this.modelLibrary});
+  AdapterLibrary({super.key, required this.modelLibrary});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +24,10 @@ class AdapterLibrary extends StatelessWidget {
                   fontSize: 26,
                   fontFamily: 'Poppins-Medium',
                   fontWeight: FontWeight.w500,
-                  colors: Color(0xffFAFF00),  
+                  colors: Color(0xffFAFF00),
                 ),
                 SizedBox(height: 4),
-                MyText(
-                    text: modelLibrary.name, fontSize: 12, fontFamily: 'Poppins-Light', fontWeight: FontWeight.w300, colors: Colors.white)
+                MyText(text: modelLibrary.name, fontSize: 12, fontFamily: 'Poppins-Light', fontWeight: FontWeight.w300, colors: Colors.white)
               ],
             )
           ],

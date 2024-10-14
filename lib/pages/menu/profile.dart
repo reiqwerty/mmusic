@@ -7,31 +7,41 @@ import '../../widget/my_rich_text.dart';
 
 class ProfilePage extends StatelessWidget {
   final List<ModelMusic> recently = [
-    ModelMusic("21 Savage", "Artist", "assets/music/21savage.png"),
-    ModelMusic("headbang", "Public Playlist", "assets/music/headbang.png"),
-    ModelMusic("Ditto", "NewJeans", "assets/music/ditto.png"),
-    ModelMusic("Post Malone", "Artist", "assets/music/postmalone.png"),
-    ModelMusic("20 Min", "Lil Uzoi Vert", "assets/music/20min.png"),
-    ModelMusic("Blueberry Faygo", "Lil Mosey", "assets/music/blueberryfaygo.png"),
-    ModelMusic("Overdose", "natori", "assets/music/overdose.png"),
-    ModelMusic("Ransom", "Lil Tecca", "assets/music/ransom.png"),
+    ModelMusic(title: "21 Savage", name: "Artist", imagePath: "assets/music/21savage.png"),
+    ModelMusic(title: "headbang", name: "Public Playlist", imagePath: "assets/music/headbang.png"),
+    ModelMusic(title: "Ditto", name: "NewJeans", imagePath: "assets/music/ditto.png"),
+    ModelMusic(title: "Post Malone", name: "Artist", imagePath: "assets/music/postmalone.png"),
+    ModelMusic(title: "20 Min", name: "Lil Uzoi Vert", imagePath: "assets/music/20min.png"),
+    ModelMusic(title: "Blueberry Faygo", name: "Lil Mosey", imagePath: "assets/music/blueberryfaygo.png"),
+    ModelMusic(title: "Overdose", name: "natori", imagePath: "assets/music/overdose.png"),
+    ModelMusic(title: "Ransom", name: "Lil Tecca", imagePath: "assets/music/ransom.png"),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: MyRichText(
-            firstText: 'M',
-            secondText: 'Music',
-            colorFirstText: Color(0xffFAFF00),
-            colorSecondText: Colors.white,
-          ),
-          centerTitle: true,
-          automaticallyImplyLeading: false,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: MyRichText(
+          firstText: 'M',
+          secondText: 'Music',
+          colorFirstText: Color(0xffFAFF00),
+          colorSecondText: Colors.white,
         ),
-        backgroundColor: Color(0xff0C0C0C),
+        centerTitle: true,
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {},
+          ),
+          SizedBox(width: 20),
+        ],
+      ),
+
+      backgroundColor: Color(0xff0C0C0C),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -53,9 +63,7 @@ class ProfilePage extends StatelessWidget {
 
           SizedBox(height: 10),
           MyText(text: '166.7 hours listening music', fontSize: 16, colors: Colors.yellowAccent, fontFamily: 'Poppins-Medium', fontWeight: FontWeight.w500,),
-
           SizedBox(height: 40),
-
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 40.0),
             child: Row(
