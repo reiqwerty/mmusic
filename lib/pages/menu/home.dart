@@ -29,6 +29,17 @@ class HomePage extends StatelessWidget {
     ModelMusic(title: "Peradaban", name: ".Feast", imagePath: "assets/music/peradaban.png"),
   ];
 
+  final List<ModelMusic> freshPlaylist = [
+    ModelMusic(title: "Heather", name: "Conan Gray", imagePath: "assets/music/heather.png"),
+    ModelMusic(title: "ETA", name: "NewJeans", imagePath: "assets/music/eta.png"),
+    ModelMusic(title: "Dandelions", name: "Ruth B.", imagePath: "assets/music/dandelions.png"),
+    ModelMusic(title: "Hindia", name: "Artist", imagePath: "assets/music/hindia.png"),
+    ModelMusic(title: "Drake", name: "Artist", imagePath: "assets/music/drake.png"),
+    ModelMusic(title: "Iron Man", name: "Black Sabbath", imagePath: "assets/music/ironman.png"),
+    ModelMusic(title: "Laskar Pelangi", name: "Nidji", imagePath: "assets/music/laskar.png"),
+    ModelMusic(title: "Lemon Tree", name: "Gustixa", imagePath: "assets/music/lemontree.png"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,7 +94,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 16),
-
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 21.0),
                 child: Container(
@@ -115,7 +125,6 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 16),
-
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 21.0),
                 child: Container(
@@ -137,7 +146,7 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     MyText(
-                      text: 'Discover your favorites',
+                      text: 'Fresh Finds of the Week',
                       fontSize: 22,
                       colors: Colors.white,
                       fontFamily: 'Montserrat-ExtraBold',
@@ -147,16 +156,15 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 16),
-
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 21.0),
                 child: Container(
                   height: 113,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: recommendedPlaylist.length,
+                    itemCount: freshPlaylist.length,
                     itemBuilder: (context, index) {
-                      return AdapterHome(modelMusic: recommendedPlaylist[index]);
+                      return AdapterHome(modelMusic: freshPlaylist[index]);
                     },
                   ),
                 ),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:mmusic/widget/my_text.dart';
 import '../../widget/my_image.dart';
 import '../../widget/my_rich_text.dart';
 
 class SearchPage extends StatelessWidget {
-  const SearchPage({super.key});
+  SearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,17 @@ class SearchPage extends StatelessWidget {
         ),
         centerTitle: true,
         automaticallyImplyLeading: false,
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 16.0),
+            child: GestureDetector(
+                onTap: () {
+                  Get.toNamed('/profile');
+                },
+                child: MyImage(imagePath: 'assets/images/profileico.png', width: 36.0, height: 36.0,)
+            ),
+          ),
+        ],
       ),
       backgroundColor: Color(0xff0C0C0C),
       body: Column(
@@ -42,14 +55,14 @@ class SearchPage extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: TextField(
               decoration: InputDecoration(
-                filled: true,
-                fillColor: Color(0xffD9D9D9),
-                prefixIcon: Icon(Icons.search, color: Colors.black),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                  borderSide: BorderSide.none,
-                ),
-                hintText: 'Search'
+                  filled: true,
+                  fillColor: Color(0xffD9D9D9),
+                  prefixIcon: Icon(Icons.search, color: Colors.black),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    borderSide: BorderSide.none,
+                  ),
+                  hintText: 'Search'
               ),
             ),
           ),
@@ -58,7 +71,7 @@ class SearchPage extends StatelessWidget {
               child: GridView(
                 padding: EdgeInsets.all(30),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10, childAspectRatio: 2.0),
+                    crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10, childAspectRatio: 2.0),
                 children: [
                   MyImage(imagePath: "assets/images/anime.png"),
                   MyImage(imagePath: "assets/images/edm.png"),
@@ -75,7 +88,7 @@ class SearchPage extends StatelessWidget {
                   MyImage(imagePath: "assets/images/classic.png"),
                   MyImage(imagePath: "assets/images/metal.png"),
                 ],
-          ))
+              ))
         ],
       ),
     );

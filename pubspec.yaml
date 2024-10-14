@@ -127,6 +127,14 @@ flutter:
     - assets/images/eminem.png
     - assets/images/turu.png
     - assets/images/loginbg.jpg
+    - assets/music/heather.png
+    - assets/music/eta.png
+    - assets/music/dandelions.png
+    - assets/music/hindia.png
+    - assets/music/drake.png
+    - assets/music/ironman.png
+    - assets/music/laskar.png
+    - assets/music/lemontree.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
