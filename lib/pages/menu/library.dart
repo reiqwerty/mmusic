@@ -63,7 +63,7 @@ class LibraryPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                MyButton(text: 'All', backgroundColor: Color(0xffFAFF00), foregroundColor: Colors.black),
+                MyButton(text: 'All', backgroundColor: Color(0xffFAFF00), foregroundColor: Colors.black, onPressed: () {}),
                 SizedBox(width: 8.0),
                 MyButton(text: 'Music', backgroundColor: Colors.black, foregroundColor: Colors.white),
                 SizedBox(width: 8.0),

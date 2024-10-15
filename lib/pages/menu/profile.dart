@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:mmusic/widget/my_button.dart';
 import 'package:mmusic/widget/my_image.dart';
 import 'package:mmusic/widget/my_text.dart';
 import '../../adapter/adapter_home.dart';
@@ -94,6 +97,21 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 65,),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 140),
+            child: SizedBox(
+              width: double.infinity,
+              child: MyButton(
+                text: 'Logout',
+                backgroundColor: Colors.red,
+                foregroundColor: Colors.white,
+                onPressed: () {
+                  Get.toNamed('/login');
+                },
+              ),
+            ),
+          )
         ],
       ),
     );
